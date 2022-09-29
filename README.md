@@ -22,7 +22,7 @@
 -
 -
 
-### 👩‍💻 STUDYEE 👩‍💻
+### 👩‍💻 STUDYEE
 
 | [<img src="https://github.com/pedro1798.png" width="100px">](https://github.com/pedro1798) | [<img src="https://github.com/abrightkite.png" width="100px">](https://github.com/abrightkite) | [<img src="https://github.com/joe-hy-j.png" width="100px">](https://github.com/joe-hy-j) | [<img src="https://github.com/Glodmilk.png" width="100px">](https://github.com/Glodmilk)
 | :----: | :----: | :----: |:----:|
