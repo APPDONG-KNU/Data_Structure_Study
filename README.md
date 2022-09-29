@@ -1,19 +1,17 @@
 # Data_Structure
 
+## 목차
+
+- [👩‍💻 STUDYEE 👩‍💻](#-STUDYEE)
+- [💻 배포 링크](#-배포-링크)
+
 ### 👩‍💻 STUDYEE 👩‍💻
 
 | [<img src="https://github.com/pedro1798.png" width="100px">](https://github.com/pedro1798) | [<img src="https://github.com/abrightkite.png" width="100px">](https://github.com/abrightkite) | [<img src="https://github.com/joe-hy-j.png" width="100px">](https://github.com/joe-hy-j) | [<img src="https://github.com/Glodmilk.png" width="100px">](https://github.com/Glodmilk)
 | :----: | :----: | :----: |:----:|
-|                           [박상준](https://github.com/pedro1798)                            |                         [박희연](https://github.com/abrightkite)                          |                        [조현진](https://github.com/joe-hy-j)                        |  [이경섭](https://github.com/Glodmilk)                        |
+| [박상준](https://github.com/pedro1798) | [박희연](https://github.com/abrightkite) | [조현진](https://github.com/joe-hy-j) | [이경섭](https://github.com/Glodmilk) |
 
 
-박상준 (https://github.com/pedro1798)
-
-박희연 (https://github.com/abrightkite)
-
-조현진 (https://github.com/joe-hy-j)
-
-이경섭 (https://github.com/Glodmilk)
 
 ## 스케줄
 
