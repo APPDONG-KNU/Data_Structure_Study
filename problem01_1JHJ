@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+	FILE* fp;
+	FILE* fpw;
+	int arraySize = 0;
+	int* fInput;
+	int leastNum = 0;
+	int secondLeastNum = 0;
+
+	fopen_s(&fp,"ini.txt", "r");
+	fopen_s(&fpw, "out.txt", "w");
+
+	if (fp == 0) {
+		return 1;
+	}
+
+	fscanf_s(fp, "%d", &arraySize);
+	printf("%d",arraySize);
+
+	fInput = (int*)malloc(sizeof(int) * arraySize);
+
+	for (int i = 0; i < arraySize; i++) {
+		fscanf_s(fp, "%d", &fInput[i]);
+		
+	}
+
+	if (fInput[0] > fInput[1]) {
+		leastNum = fInput[1];
+		secondLeastNum = fInput[0];
+	}
+	else {
+		leastNum = fInput[0];
+		secondLeastNum = fInput[1];
+	}
+
+	for (int i = 2; i < arraySize; i++) {
+		if (secondLeastNum > fInput[i]) {
+			if (leastNum > fInput[i]) {
+				secondLeastNum = leastNum;
+				leastNum = fInput[i];
+			}
+			else {
+				secondLeastNum = fInput[i];
+			}
+		}
+	}
+	
+	printf("가장 작은 값: %d\n", leastNum);
+	printf("두 번째로 작은 값: %d\n", secondLeastNum);
+
+	int x = 0;
+
+	while (x <= 0) {
+		printf("x값 입력: ");
+		scanf_s("%d", &x);
+	}
+	
+	printf("%d의 배수: ", x);
+	for (int i = 0; i < arraySize; i++) {
+		if (fInput[i] % x == 0) {
+			fprintf_s(fpw, "%d ", fInput[i]);
+			printf("%d ", fInput[i]);
+		}
+	}
+
+
+
+	fclose(fp);
+	fclose(fpw);
+	return 0;
+}
