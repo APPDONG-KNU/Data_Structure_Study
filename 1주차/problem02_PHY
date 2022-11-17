@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int fibo(int num) {
+	if (num == 0) {
+		return 0;
+	}
+	if (num == 1) {
+		return 1;
+	}
+
+	return fibo(num - 1) + fibo(num - 2);
+}
+
+int main() {
+	int n;
+
+	while (true) {
+		scanf("%d", &n);
+
+		if (n >= 0 && n <= 40) {
+			int* array = (int*)malloc(sizeof(int) * (n + 1));
+
+			array[0] = 0;
+			array[1] = 1;
+			clock_t start = clock();
+			for (int i = 2; i <= n; i++) {
+				array[i] = array[i - 1] + array[i - 2];
+			}
+			clock_t end = clock();
+			double elapsed = ((double)end - (double)start) / CLOCKS_PER_SEC;
+
+			printf("Iterative: %d (%lf ms) \n", array[n], elapsed * 1000);
+
+			start = clock();
+			int result = fibo(n);
+			end = clock();
+			elapsed = ((double)end - (double)start) / CLOCKS_PER_SEC;
+			printf("Recuesion: %d (%lf ms) \n", result, elapsed * 1000);
+
+		}
+		else {
+			break;
+		}
+	}
+	
+
+	return 0;
+}
