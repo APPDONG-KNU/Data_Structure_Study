@@ -1,0 +1,65 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+int Fibonacci(int n) {
+
+	if (n == 0)
+		return 0;
+	else if (n == 1)
+		return 1;
+	else if (n > 0) {
+		return Fibonacci(n - 1) + Fibonacci(n - 2);
+	}
+
+}
+int main()
+{
+
+	while (1) {
+		int n = 0;
+		scanf_s("%d", &n);
+		int* myArray;
+
+		if (n < 0 || n > 40) {
+			return 1;
+		}
+
+		myArray = (int*)malloc(sizeof(int) * (n + 1));
+		myArray[0] = 0;
+		myArray[1] = 1;
+
+		clock_t start, finish;
+		double elapsed;
+		start = clock();
+		// 수행 시간을 측정할 프로그램코드가들어갈부분임.
+
+		for (int i = 2; i < n + 1; i++) {
+			myArray[i] = myArray[i - 1] + myArray[i - 2];
+		}
+
+		finish = clock();
+		// 아래는 start와 finish 사이의 명령이 수행되는 데 걸린 시간을 millisecond 단위로 환산하여
+		// 출력하는 명령임.
+		printf("Iterative: %d (", myArray[n]);
+		elapsed = ((double)(finish)-(double)(start)) / CLOCKS_PER_SEC;
+		printf("time: %f)\n", elapsed * 1000.0);
+
+		free(myArray);
+
+
+		start = clock();
+
+		int result = Fibonacci(n);
+
+		// 수행 시간을 측정할 프로그램코드가들어갈부분임.
+		finish = clock();
+		// 아래는 start와 finish 사이의 명령이 수행되는 데 걸린 시간을 millisecond 단위로 환산하여
+		// 출력하는 명령임.
+		printf("Recursive: %d (", result);
+		elapsed = ((double)(finish)-(double)(start)) / CLOCKS_PER_SEC;
+		printf("time: %f)\n", elapsed * 1000.0);
+
+	}
+	return 0;
+}
